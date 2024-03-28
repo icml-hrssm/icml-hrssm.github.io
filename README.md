@@ -1,2 +1,2 @@
-# animate_anyone.github.io
-Project Page for Animate Anyone
+# icml-hrssm.github.io
+Project Page for HRSSM
