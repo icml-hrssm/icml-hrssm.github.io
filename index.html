@@ -74,11 +74,19 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
+                        <a href="static/pdfs/HRSSM_old.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Old Paper</span>
+                      </a>
+                    </span>
+                      <span class="link-block">
                         <a href="static/pdfs/HRSSM.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
-                        <span>Paper</span>
+                        <span>Updated Paper</span>
                       </a>
                     </span>
 
@@ -108,147 +116,50 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Manuscript Updates</h2>
         <div class="content has-text-justified">
           <p>
-            Visual Model-Based Reinforcement Learning (MBRL) promises to encapsulate agent's knowledge about the underlying dynamics of the environment, enabling learning a world model as a useful planner. However, top MBRL agents such as Dreamer often struggle with visual pixel-based inputs in the presence of exogenous or irrelevant noise in the observation space, due to failure to capture task-specific features while filtering out irrelevant spatio-temporal details. To tackle this problem,  we apply a spatio-temporal masking strategy, a bisimulation principle, combined with latent reconstruction, to capture endogenous task-specific aspects of the environment for world models, effectively eliminating non-essential information. Joint training of representations, dynamics, and policy often leads to instabilities. To further address this issue, we develop a Hybrid Recurrent State-Space Model (HRSSM) structure, enhancing state representation robustness for effective policy learning. Our empirical evaluation demonstrates significant performance improvements over existing methods in a range of visually complex control tasks such as Maniskill with exogenous distractors from the Matterport environment. 
+            1. We have thoroughly revised our manuscript, addressing all the mentioned typos and minor issues.
           </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3">Method</h2>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/world_model.jpg" style="width:50%;display: block; margin-left: auto; margin-right: auto;"/>
-        <h2 class="content has-text-justified">
-          Our framework is composed of a Hybrid-RSSM and actor-critic architecture. Hybrid-RSSM learns robust representations and dynamics through four distinct objectives: latent reconstruction, which aligns features between masked and raw observations; similarity loss based on the bisimulation principle; and two additional objectives same as in Dreamer series.
-       </h2>
-       <img src="static/images/pipeline.png" style="width:50%;display: block; margin-left: auto; margin-right: auto;"/>
-        <h2 class="content has-text-justified">
-          The entire pipeline of our framework in the presence of exogenous information. The HRSSM processes the observations into the latent space, enabling the agent to learn control within this space. Subsequently, the policy network generates actions for interacting with the environment.
-       </h2>
-       
-     </div>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3">HRSSM can learn task-specific information</h2>
-      <img src="static/images/grad_cam.png"/>
-      To verify that our model is indeed capable of filtering task-irrelevant redundancy and learning task-specific features, we use Gradient-weighted Class Activation Mapping technique for feature visualization. The heatmaps demonstrate that HRSSM excels at filtering out background noise and effectively focuses on the agent's body, which is crucial for control tasks. The results confirm HRSSM's capability to discern task-relevant information from visual inputs with extraneous noise.
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3">Comparisons</h2>
-      <img src="static/images/all_distractions.png"/>
-      <h2 class="content has-text-justified">
-          All kinds of distraction settings we used for evaluation (including the default setting, i.e., no distraction).
-       </h2>
-
-
-      <h2 class="title is-4"></h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="" alt="MY ALT TEXT"/>
-        </div>
-      </div>
-      <h2 class="title is-4">DMC tasks with default settings</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/default_curve.png" alt="MY ALT TEXT"/>
-        </div>
-      </div>
-      <h2 class="title is-4">DMC tasks with distraction settings</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/distraction_dmc_result.png" alt="MY ALT TEXT"/>
-        </div>
-      </div>
-      <h2 class="title is-4">Realistic Maniskill</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/maniskill_result.png" alt="MY ALT TEXT"/>
-        </div>
-      </div>
-      <h2 class="title is-4">Color_easy in DMC-GS</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/color_easy.png" alt="MY ALT TEXT"/>
-        </div>
-      </div>
-      <h2 class="title is-4">Color_hard in DMC-GS</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/color_hard.png" alt="MY ALT TEXT"/>
-        </div>
-      </div>
-      <h2 class="title is-4">Video_hard in DMC-GS</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/video_hard.png" alt="MY ALT TEXT"/>
-        </div>
-      </div>
-      <h2 class="title is-4">Video_category_changing</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/video_category_changing.png" alt="MY ALT TEXT"/>
-        </div>
-      </div>
-      <h2 class="title is-4">Camera_changing</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/camera_changing.png" alt="MY ALT TEXT"/>
-        </div>
-      </div>
-      <h2 class="title is-4">Distracting_CS</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/distracting_cs.png" alt="MY ALT TEXT"/>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            2. We provided various new experimental results and visualizations as suggested by the reviewers. 
           </p>
+          <p>
+            3. We have provided more comprehensive empirical evaluations and the corresponding descriptions in the current revision.
+          </p>
+          <p>
+            4. To clarify our theoretical contributions, we have expanded the explanation of Theorem 5.1 to ensure a more comprehensive/clearer understanding.
+          </p>
+          <p>
+            5. We have now provided the background description of bisimulation relation and bisimulation metrics in Appendix B.2 to make our manuscript more self-contained.
+          </p>
+        </div>
 
+        <h2 class="title is-3">New Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            1. We have included additional Distraction and Exogenous Noise based benchmarks, including DeepMind Control Suite Generalization Benchmark (DMC-GS) and Distracting Control Suite (Distraction-CS), which makes the total number of distractions to 9 (including the default setting).
+          </p>
+          <p>
+            2. We have included a visualization of the learned features using the Gradient-weighted Class Activation Mapping and Saliency map to demonstrate the model's capability to learn task-specific information.
+          </p>
+          <p>
+            3. We have provided the result with IQM metric for DMC tasks with distraction settings to show that our model is statistically significantly better than the baselines. We also updated all results with 6 seeds for better statistical significance.
+          </p>
+          <p>
+            4. We have included additional ablation studies of masking ratio and cuboid patch size.
+          </p>
+          <p>
+            5. We have also provided current failure cases.
+          </p>
         </div>
       </div>
     </div>
   </div>
-</footer>
+</section>
+
+
+
 
 <script>
 bulmaCarousel.attach('#results-carousel11', {
