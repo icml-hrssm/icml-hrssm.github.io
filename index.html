@@ -94,7 +94,7 @@
 
                 
             </div>
-            <h2 class="title is-3" color=red;>All updates please refer to our updated paper!(above button)</h2>
+            <h2 class="title is-3" color=red;>All updates please refer to our updated paper! (above button)</h2>
           </div>
         </div>
       </div>
@@ -108,6 +108,16 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+
+        <h2 class="title is-3">Visualization</h2>
+        <div class="content has-text-justified">
+          <p> To verify that our model is indeed capable of filtering task-irrelevant redundancy and learning task-specific features, we utilized the Gradient-weighted Class Activation Mapping (Grad-CAM) technique for feature visualization. </p>
+          <img src="static/images/grad_cam.png">
+
+          <p>DreamerV3 baseline does not capture any meaningful information that relevant to the task, and RePo struggle to precisely identify the control-relevant parts of the image inputs as it also focus on some irrelevant background noises like the reflections on the surface. Instead, our model filter out background noise and focuses on the objects that is crucial for control tasks effectively. </p>
+        </div>
+
+
         <h2 class="title is-3">Manuscript Updates</h2>
         <div class="content has-text-justified">
           <p>
