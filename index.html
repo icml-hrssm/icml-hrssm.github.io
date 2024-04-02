@@ -111,7 +111,7 @@
 
         <h2 class="title is-3">Visualization</h2>
         <div class="content has-text-justified">
-          <p> To verify that our model is indeed capable of filtering task-irrelevant redundancy and learning task-specific features, we utilized the Gradient-weighted Class Activation Mapping (Grad-CAM) technique for feature visualization. </p>
+          <p> To verify that our model is indeed capable of filtering task-irrelevant redundancy and learning task-specific features, we utilized the Gradient-weighted Class Activation Mapping (Grad-CAM)[1] technique for feature visualization. </p>
           <img src="static/images/grad_cam.png">
 
           <p>DreamerV3 baseline does not capture any meaningful information that relevant to the task, and RePo struggle to precisely identify the control-relevant parts of the image inputs as it also focus on some irrelevant background noises like the reflections on the surface. Instead, our model filter out background noise and focuses on the objects that is crucial for control tasks effectively. </p>
@@ -158,6 +158,7 @@
       </div>
     </div>
   </div>
+  <p> [1]: Selvaraju R R, Cogswell M, Das A, et al. Grad-cam: Visual explanations from deep networks via gradient-based localization[C]//Proceedings of the IEEE international conference on computer vision. 2017: 618-626.</p>
 </section>
 
 
